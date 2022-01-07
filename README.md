@@ -1,4 +1,7 @@
 # Determined
+Determined is a workout tracking program using a Flask backend and
+Repository at https://github.com/wonaval/determined
+Deployed at TBA
 ## ERD - Database Diagram
 ## Route Inventory
 ## Technology
