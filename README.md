@@ -66,16 +66,23 @@ Frontend - React, Javscript, HTML, CSS
 
 ## User Stories
 
-When I test, test happens...
+- When I first load the app, I am greeted with a landing page with sign up and sign in links
+- When I sign up or sign up, I am brought to the My Routines page
+- When I am on the My Routines page, I can create a new routine, update a routine, delete a routine, or start a workout from a routine
+- When I am creating a routine, I am brough to a page where I can add an exercise from a list of exercises and save the routine
+-
 
 ## MVP
 
 - [] Sign up, sign in, update, and delete a user
-- []
+- [] Create, view, update, and delete routine
+- [] Create, view, update, and delete a workout log
 
 ## Stretch Goals
 
-- []
+- [] Track stats from previous workout
+- [] Add
+- [] Mobile app
 
 ## Timeline
 
