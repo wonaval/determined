@@ -68,21 +68,23 @@ Wireframe can be found at https://www.figma.com/file/j8coASLST0vN7vTGgXIwnk/Dete
 
 - When I first load the app, I am greeted with a landing page with sign up and sign in links
 - When I sign up or sign up, I am brought to the My Routines page
-- When I am on the My Routines page, I can create a new routine, update a routine, delete a routine, or start a workout from a routine
+- When I am on the My Routines page, I see currently made routines, I can create a new routine, update a routine, delete a routine, or start a new log from a routine
 - When I am creating a routine, I am brough to a page where I can add an exercise from a list of exercises and save the routine
--
+- When I click on the My Logs page, I can view existing logs where I can edit or delete them
+- When I click on add new log from the my routines page, I am taken to the add log page that lists all the exercises and I can edit sets/reps/weight and complete the log
+- When I click on My Account, the page displays my current account information. I am also able to edit or delete my account
 
 ## MVP
 
-- [] Sign up, sign in, update, and delete a user
-- [] Create, view, update, and delete routine
-- [] Create, view, update, and delete a workout log
+- [ ] Sign up, sign in, update, and delete a user
+- [ ] Create, view, update, and delete routine
+- [ ] Create, view, update, and delete a workout log
 
 ## Stretch Goals
 
-- [] Track stats from previous workout
-- [] Add
-- [] Mobile app
+- [ ] Track stats from previous workout
+- [ ] Mobile app
+- [ ] Filter exercise databse
 
 ## Timeline
 
@@ -92,4 +94,4 @@ Wireframe can be found at https://www.figma.com/file/j8coASLST0vN7vTGgXIwnk/Dete
 
 ## Challenges/Obstacles
 
--
+- Not as familiar with Python as I am with Javascript but I should be able to complete this project on time
