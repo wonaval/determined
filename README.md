@@ -66,12 +66,12 @@ Wireframe can be found at https://www.figma.com/file/j8coASLST0vN7vTGgXIwnk/Dete
 
 ## User Stories
 
-- When I first load the app, I am greeted with a landing page with sign up and sign in links
+- When I first load the app, I am greeted with a landing page describing the app, with sign up and sign in links
 - When I sign up or sign up, I am brought to the My Routines page
-- When I am on the My Routines page, I see currently made routines, I can create a new routine, update a routine, delete a routine, or start a new log from a routine
-- When I am creating a routine, I am brough to a page where I can add an exercise from a list of exercises and save the routine
+- When I am on the My Routines page, I can view currently made routines, create a new routine, update a routine, delete a routine, or start a new log from an existing routine
+- When I create a routine, I am brought to a page where I can add an exercise from a list of exercises and save the routine
 - When I click on the My Logs page, I can view existing logs where I can edit or delete them
-- When I click on add new log from the my routines page, I am taken to the add log page that lists all the exercises and I can edit sets/reps/weight and complete the log
+- When I click on Add New Log from the My Routines page, I am taken to the Add New Log page that has a lists of all the exercises that I can add. I can edit sets/reps/weight and complete adding a new log as well
 - When I click on My Account, the page displays my current account information. I am also able to edit or delete my account
 
 ## MVP - Minimum Viable Product
