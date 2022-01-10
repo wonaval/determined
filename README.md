@@ -62,7 +62,7 @@ Frontend - React, Javscript, HTML, CSS
 
 ## Wireframes
 
-![Wireframe](/assets/wire.png)
+Wireframe can be found at https://www.figma.com/file/j8coASLST0vN7vTGgXIwnk/Determined?node-id=13%3A34
 
 ## User Stories
 
