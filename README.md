@@ -1,8 +1,8 @@
 # **Determined**
 
-**Overview:** Determined is a workout tracking program using a Flask backend and a React front end.</br>
-**Motivation:** I went to the gym quite often before the we had to be locked down and some of the workout log apps I used didn't work quite the way I wanted so I thought I'd try to make one of my own. </br>
-The exercise database being used is located at https://github.com/wrkout/exercises.json</br>
+**Overview:** Determined is a workout tracking program using a Flask backend and a React front end </br>
+**Motivation:** I went to the gym quite often before the we had to be locked down and some of the workout log apps I used didn't work quite the way I wanted so I thought I'd try to make one of my own </br>
+The exercise database being used is located at https://github.com/wrkout/exercises.json </br>
 Determined repository is located at https://github.com/wonaval/determined </br>
 Deployed at TBA
 
@@ -74,7 +74,7 @@ Wireframe can be found at https://www.figma.com/file/j8coASLST0vN7vTGgXIwnk/Dete
 - When I click on add new log from the my routines page, I am taken to the add log page that lists all the exercises and I can edit sets/reps/weight and complete the log
 - When I click on My Account, the page displays my current account information. I am also able to edit or delete my account
 
-## MVP
+## MVP - Minimum Viable Product
 
 - [ ] Sign up, sign in, update, and delete a user
 - [ ] Create, view, update, and delete routine
