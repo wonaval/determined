@@ -1,12 +1,12 @@
 # **Determined**
 
 **Overview:** Determined is a workout tracking program using a Flask backend and a React front end </br>
-**Motivation:** I went to the gym quite often before the we had to be locked down and some of the workout log apps I used didn't work quite the way I wanted so I thought I'd try to make one of my own </br>
+**Motivation:** I went to the gym quite often before the we had to be locked down and I wanted to see if I could make a workout log application </br>
 The exercise database being used is located at https://github.com/wrkout/exercises.json </br>
 Determined repository is located at https://github.com/wonaval/determined </br>
 Deployed at TBA
 
-## ERD - Database Diagram
+## ERD - Entity Relationship Diagram
 
 ![ERD Diagram](/assets/erd.png)
 
