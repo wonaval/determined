@@ -40,16 +40,16 @@ Deployed at TBA
 
 ### Workout Routes
 
-| ROUTE  | Path                             | Description                       |
-| :----- | :------------------------------- | :-------------------------------- |
-| POST   | /workout                         | Create workout log                |
-| GET    | /workout                         | Get all workout logs              |
-| GET    | /workout/:workout_id             | Get individual workout log        |
-| DELETE | /workout/:workout_id             | Delete workout log                |
-| POST   | /workout/:workout_id/log         | Create exercise log under workout |
-| GET    | /workout/:workout_id/log         | Get all exercises under workout   |
-| PUT    | /workout/:workout_id/log/:log_id | Update execise log under workout  |
-| DELETE | /workout/:workout_id/log/:log_id | Delete exercise under workout     |
+| ROUTE  | Path                             | Description                |
+| :----- | :------------------------------- | :------------------------- |
+| POST   | /workout                         | Create workout log         |
+| GET    | /workout                         | Get all workout logs       |
+| GET    | /workout/:workout_id             | Get individual workout log |
+| DELETE | /workout/:workout_id             | Delete workout log         |
+| POST   | /workout/:workout_id/log         | Create log under workout   |
+| GET    | /workout/:workout_id/log         | Get all logs under workout |
+| PUT    | /workout/:workout_id/log/:log_id | Update log under workout   |
+| DELETE | /workout/:workout_id/log/:log_id | Delete log under workout   |
 
 ## Technology
 
