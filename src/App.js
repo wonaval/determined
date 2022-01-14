@@ -61,6 +61,10 @@ const App = () => {
           element={user.name ? <Logs /> : <Navigate to="/signup" />}
         />
         <Route
+          path="/log/:routine_id"
+          element={user.name ? <Logs /> : <Navigate to="/signup" />}
+        />
+        <Route
           path="/routine"
           element={user.name ? <Routines /> : <Navigate to="/signup" />}
         />

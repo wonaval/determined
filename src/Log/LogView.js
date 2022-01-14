@@ -1,9 +1,13 @@
+import { useParams } from 'react-router-dom';
+
 const LogView = () => {
+  let { routine_id } = useParams();
   return (
     <div>
       <div>
         <div>Exercise Name</div>
         <div>
+          <div>routine_id: {routine_id}</div>
           <div>
             <span>Target Sets</span>
             <span>Target Reps</span>
@@ -25,7 +29,6 @@ const LogView = () => {
             <span>135</span>
           </div>
           <div>
-            <input type="button" value="Edit Log" />
             <input type="button" value="Delete Log" />
           </div>
         </div>
