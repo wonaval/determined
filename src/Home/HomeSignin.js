@@ -2,11 +2,15 @@
 import { useState, useContext } from 'react';
 import axios from 'axios';
 import env from 'react-dotenv';
+import { useNavigate } from 'react-router-dom';
 
 // Import useContext
 import { UserContext } from '../global/UserContext';
 
 const HomeSignin = () => {
+  // useNavigate
+  let navigate = useNavigate();
+
   // useContext
   const { userState } = useContext(UserContext);
   const [user, setUser] = userState;
@@ -26,6 +30,7 @@ const HomeSignin = () => {
       .then((response) => {
         localStorage.setItem('user_id', response.data.user_id);
         setUser(response.data.user);
+        navigate('../routine', { replace: true });
       })
       .catch((error) => {
         console.log(error.message);
@@ -36,21 +41,20 @@ const HomeSignin = () => {
     <div>
       <div>Sign In</div>
       <form onSubmit={submitForm}>
-        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
-          placeholder="Email..."
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="passwords">Password</label>
         <input
           type="password"
           name="password"
-          placeholder="Password..."
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input type="submit" value="Log In" />
+        <div>ERRORS</div>
+        <input type="submit" value="Sign In" />
       </form>
     </div>
   );

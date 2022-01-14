@@ -10,11 +10,15 @@ import './index.css';
 const Logs = () => {
   return (
     <div>
-      <div>LOG</div>
+      <div>My Logs</div>
       <LogAdd />
       <LogDelete />
       <LogEdit />
       <LogView />
+
+      <Routes>
+        <Route path></Route>
+      </Routes>
     </div>
   );
 };

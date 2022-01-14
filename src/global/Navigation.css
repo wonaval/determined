@@ -1,3 +1,14 @@
-.signout {
-  cursor: cusor;
+.nav-link {
+  cursor: pointer;
+}
+
+.nav-link a,
+.nav-link span {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
 }

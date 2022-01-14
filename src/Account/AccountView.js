@@ -1,19 +1,39 @@
-const AccountView = () => {
+// Import Modules
+import { useContext } from 'react';
+
+// Import useContext
+import { UserContext } from '../global/UserContext';
+
+const AccountView = (props) => {
+  // useContext
+  const { userState } = useContext(UserContext);
+  const [user] = userState;
+
+  // Component Functions
+  const showDelete = () => {
+    props.setDel(!props.del);
+    props.setView(!props.view);
+  };
+
+  const showEdit = () => {
+    props.setEdit(!props.edit);
+    props.setView(!props.view);
+  };
   return (
     <div>
-      <div>My Account Information</div>
       <div>
-        <div>Name:</div>
-        <div>Username:</div>
-        <div>Email:</div>
+        <div>Name: {user.name}</div>
+        <div>Username: {user.username}</div>
+        <div>Email: {user.email}</div>
         <div>Password: ***</div>
       </div>
+      <div>ERRORS</div>
       <div>
         <div>
-          <input type="button" value="Edit Account" />
+          <input type="button" value="Edit Account" onClick={showEdit} />
         </div>
         <div>
-          <input type="button" value="Delete Account" />
+          <input type="button" value="Delete Account" onClick={showDelete} />
         </div>
       </div>
     </div>

@@ -1,3 +1,6 @@
+// Import modules
+import { Route, Routes } from 'react-router-dom';
+
 // Import Components
 import HomeAbout from './HomeAbout';
 import HomeSignin from './HomeSignin';
@@ -9,10 +12,12 @@ import './index.css';
 const Home = () => {
   return (
     <div>
-      HOME
-      <HomeAbout />
-      <HomeSignin />
-      <HomeSignup />
+      <Routes>
+        <Route path="/" element={<HomeAbout />} />
+        <Route path="/about" element={<HomeAbout />} />
+        <Route path="/signup" element={<HomeSignup />} />
+        <Route path="/signin" element={<HomeSignin />} />
+      </Routes>
     </div>
   );
 };

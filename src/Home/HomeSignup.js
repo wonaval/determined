@@ -2,11 +2,15 @@
 import { useState, useContext } from 'react';
 import axios from 'axios';
 import env from 'react-dotenv';
+import { useNavigate } from 'react-router-dom';
 
 // Import useContext
 import { UserContext } from '../global/UserContext';
 
 const HomeSignup = () => {
+  // useNavigate
+  let navigate = useNavigate();
+
   // useContext
   const { userState } = useContext(UserContext);
   const [user, setUser] = userState;
@@ -30,6 +34,7 @@ const HomeSignup = () => {
       .then((response) => {
         localStorage.setItem('user_id', response.data.user_id);
         setUser(response.data.user);
+        navigate('../routine', { replace: true });
       })
       .catch((error) => {
         console.log(error.message);
@@ -40,38 +45,31 @@ const HomeSignup = () => {
     <div>
       <div>Sign up</div>
       <form onSubmit={submitForm}>
-        <label htmlFor="name">Name</label>
         <input
           type="text"
-          name="name"
           value={name}
-          placeholder="Name..."
+          placeholder="Name"
           onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="username">Username</label>
         <input
           type="text"
-          name="username"
           value={username}
-          placeholder="Username..."
+          placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="email">Email</label>
         <input
           type="email"
-          name="email"
           value={email}
-          placeholder="Email..."
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="passwords">Password</label>
         <input
           type="password"
-          name="password"
           value={password}
-          placeholder="Password..."
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <div>ERRORS</div>
         <input type="submit" value="Sign Up" />
       </form>
     </div>

@@ -1,5 +1,6 @@
 // Imports Modules
-import { useEffect, useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import env from 'react-dotenv';
 import axios from 'axios';
 
@@ -44,15 +45,27 @@ const App = () => {
         });
     }
   };
+
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <Navigation />
-      {/* <Home /> */}
-      {/* <Routines /> */}
-      {/* <Logs /> */}
-      <Account />
-      {/* <Footer /> */}
+      <Routes>
+        <Route path="*" element={<Home />} />
+        <Route
+          path="/account"
+          element={user.name ? <Account /> : <Navigate to="/signin" />}
+        />
+        <Route
+          path="/log"
+          element={user.name ? <Logs /> : <Navigate to="/signup" />}
+        />
+        <Route
+          path="/routine"
+          element={user.name ? <Routines /> : <Navigate to="/signup" />}
+        />
+      </Routes>
+      <Footer />
     </div>
   );
 };
