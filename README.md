@@ -4,7 +4,7 @@
 **Motivation:** I went to the gym quite often before the we had to be locked down and I wanted to see if I could make a workout log application </br>
 The exercise database being used is located at https://github.com/wrkout/exercises.json </br>
 Determined repository is located at https://github.com/wonaval/determined </br>
-Deployed at TBA
+Deployed at https://determined-wonaval.herokuapp.com/
 
 ## ERD - Entity Relationship Diagram
 
