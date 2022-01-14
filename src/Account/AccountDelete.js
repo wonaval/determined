@@ -49,22 +49,31 @@ const AccountDelete = (props) => {
         <div>Username: {user.username}</div>
         <div>Email: {user.email}</div>
         <div>
-          Password:
           <input
             type="text"
             value={password}
+            className="sign-inputs"
             placeholder="Enter current password..."
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
       </div>
-      <div>ERRORS</div>
       <div>
         <div>
-          <input type="button" value="DELETE ACCOUNT" onClick={handleSubmit} />
+          <input
+            type="button"
+            value="DELETE ACCOUNT"
+            className="sign-button-delete"
+            onClick={handleSubmit}
+          />
         </div>
         <div>
-          <input type="button" value="Cancel Delete" onClick={showView} />
+          <input
+            type="button"
+            value="Cancel Delete"
+            className="sign-button"
+            onClick={showView}
+          />
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import Select from 'react-select';
 import axios from 'axios';
 import env from 'react-dotenv';
 
+import './index.css';
+
 const options = [];
 
 const RoutineAdd = (props) => {
@@ -16,9 +18,6 @@ const RoutineAdd = (props) => {
   const [reps, setReps] = useState([]);
   const [rest, setRest] = useState([]);
   const [exerciseID, setExerciseID] = useState([]);
-  const [tempSets, setTempSets] = useState(0);
-  const [tempReps, setTempReps] = useState(0);
-  const [tempRest, setTempRest] = useState(0);
 
   // useEffect - On load
   useEffect(() => {
@@ -141,7 +140,7 @@ const RoutineAdd = (props) => {
                   <div>
                     <div className="routine-main">
                       <div className="routine-input">
-                        <div>Sets</div>
+                        <div className="target-main">Sets</div>
                         <div>
                           <input
                             type="text"
@@ -151,7 +150,7 @@ const RoutineAdd = (props) => {
                         </div>
                       </div>
                       <div className="routine-input">
-                        <div>Reps</div>
+                        <div className="target-main">Reps</div>
                         <div>
                           <input
                             type="text"
@@ -161,7 +160,7 @@ const RoutineAdd = (props) => {
                         </div>
                       </div>
                       <div className="routine-input">
-                        <div>
+                        <div className="target-main">
                           Rest
                           <br />
                           (secs)
@@ -178,7 +177,8 @@ const RoutineAdd = (props) => {
                   </div>
                   <input
                     type="button"
-                    value="X"
+                    className="sign-button"
+                    value="Remove Exercise"
                     onClick={() => {
                       handleRemove(index);
                     }}
@@ -190,9 +190,19 @@ const RoutineAdd = (props) => {
       </div>
       <div>
         {exercise ? (
-          <input type="button" value="Add Exercise" onClick={addExercise} />
+          <input
+            type="button"
+            value="Add Exercise"
+            className="sign-button"
+            onClick={addExercise}
+          />
         ) : (
-          <input type="button" value="Add Exercise" disabled />
+          <input
+            type="button"
+            value="Add Exercise"
+            className="sign-button-disabled"
+            disabled
+          />
         )}
       </div>
       <div className="exercise-list">
@@ -201,6 +211,7 @@ const RoutineAdd = (props) => {
             isClearable
             isSearchable
             options={options}
+            className="react-exercise-list"
             defaultValue={exercise}
             onChange={setExercise}
           />
@@ -208,9 +219,19 @@ const RoutineAdd = (props) => {
       </div>
       <div>
         {routine.length ? (
-          <input type="button" value="Save Routine" onClick={pushRoutine} />
+          <input
+            type="button"
+            className="sign-button"
+            value="Save Routine"
+            onClick={pushRoutine}
+          />
         ) : (
-          <input type="button" value="Save Routine" disabled />
+          <input
+            type="button"
+            className="sign-button-disabled"
+            value="Save Routine"
+            disabled
+          />
         )}
       </div>
     </div>

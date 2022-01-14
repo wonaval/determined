@@ -27,13 +27,22 @@ const AccountView = (props) => {
         <div>Email: {user.email}</div>
         <div>Password: ***</div>
       </div>
-      <div>ERRORS</div>
       <div>
         <div>
-          <input type="button" value="Edit Account" onClick={showEdit} />
+          <input
+            type="button"
+            value="Edit Account"
+            className="sign-button"
+            onClick={showEdit}
+          />
         </div>
         <div>
-          <input type="button" value="Delete Account" onClick={showDelete} />
+          <input
+            type="button"
+            value="Delete Account"
+            className="sign-button"
+            onClick={showDelete}
+          />
         </div>
       </div>
     </div>

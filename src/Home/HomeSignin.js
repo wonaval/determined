@@ -38,23 +38,24 @@ const HomeSignin = () => {
   };
 
   return (
-    <div>
-      <div>Sign In</div>
+    <div className="sign-main">
+      <div className="header">Sign In</div>
       <form onSubmit={submitForm}>
         <input
           type="email"
           name="email"
           placeholder="Email"
+          className="sign-inputs"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           name="password"
           placeholder="Password"
+          className="sign-inputs"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div>ERRORS</div>
-        <input type="submit" value="Sign In" />
+        <input type="submit" className="sign-button" value="Sign In" />
       </form>
     </div>
   );

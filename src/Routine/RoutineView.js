@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import env from 'react-dotenv';
 import { useNavigate } from 'react-router-dom';
+import RoutineDetail from './RoutineDetail';
 
 const RoutineView = (props) => {
   let navigate = useNavigate();
@@ -45,6 +46,7 @@ const RoutineView = (props) => {
           <input
             type="button"
             value="Add New Routine"
+            className="sign-button"
             onClick={() => {
               props.setAdd(!props.add);
               props.setView(!props.view);
@@ -56,16 +58,16 @@ const RoutineView = (props) => {
           routines.map((routine) => {
             return (
               <div key={routine.id}>
+                <div className="routine-name">{routine.name}</div>
                 <div>
-                  {routine.name} <br />
-                  {routine.id}
+                  <RoutineDetail routine_id={routine.id} />
                 </div>
-                <div></div>
                 <div>
                   <input
                     type="button"
                     value="Start New Log"
                     name={routine.id}
+                    className="sign-button"
                     onClick={(e) => {
                       startLog(e.target.name);
                     }}
@@ -75,6 +77,7 @@ const RoutineView = (props) => {
                   <input
                     type="button"
                     value="Delete Routine"
+                    className="sign-button"
                     onClick={() => {
                       deleteRoutine(routine.id);
                     }}
@@ -84,7 +87,10 @@ const RoutineView = (props) => {
             );
           })
         ) : (
-          <div>No routines! Click Add New Routine to create a routine.</div>
+          <div className="status-text">
+            No routines! <br />
+            Click <b>Add New Routine</b> to create one
+          </div>
         )}
       </div>
     </div>

@@ -15,7 +15,7 @@ const Logs = () => {
 
   return (
     <div>
-      <div>My Logs</div>
+      <div className="header">My Logs</div>
       {add ? (
         <LogAdd add={add} setAdd={setAdd} view={view} setView={setView} />
       ) : null}

@@ -1,0 +1,9 @@
+.sign-button-delete {
+  margin-top: 5px;
+  border: 1px solid #1f1f1f;
+  background-color: #7c0a02;
+  color: white;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+}

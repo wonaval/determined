@@ -42,35 +42,38 @@ const HomeSignup = () => {
   };
 
   return (
-    <div>
-      <div>Sign up</div>
+    <div className="sign-main">
+      <div className="header">Sign up</div>
       <form onSubmit={submitForm}>
         <input
           type="text"
           value={name}
           placeholder="Name"
+          className="sign-inputs"
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
           value={username}
           placeholder="Username"
+          className="sign-inputs"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="email"
           value={email}
           placeholder="Email"
+          className="sign-inputs"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           value={password}
           placeholder="Password"
+          className="sign-inputs"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div>ERRORS</div>
-        <input type="submit" value="Sign Up" />
+        <input type="submit" className="sign-button" value="Sign Up" />
       </form>
     </div>
   );

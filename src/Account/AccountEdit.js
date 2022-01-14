@@ -50,41 +50,42 @@ const AccountEdit = (props) => {
 
   return (
     <div>
+      <div>Edit Account</div>
       <div>
         <form onSubmit={submitForm}>
           <div>
-            Name:
             <input
               type="text"
               value={name}
-              placeholder="Edit name..."
+              className="sign-inputs"
+              placeholder="Name"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div>
-            Username:
             <input
               type="text"
               value={username}
-              placeholder="Edit username..."
+              className="sign-inputs"
+              placeholder="Username"
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div>
-            Email:
             <input
               type="text"
               value={email}
-              placeholder="Edit email..."
+              className="sign-inputs"
+              placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div>
-            Password:
             <input
               type="password"
               value={password}
-              placeholder="Edit password..."
+              className="sign-inputs"
+              placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -93,10 +94,20 @@ const AccountEdit = (props) => {
       <div>{error}</div>
       <div>
         <div>
-          <input type="button" value="Cancel Changes" onClick={showView} />
+          <input
+            type="button"
+            value="Cancel Changes"
+            className="sign-button"
+            onClick={showView}
+          />
         </div>
         <div>
-          <input type="button" value="Save Changes" onClick={submitForm} />
+          <input
+            type="button"
+            value="Save Changes"
+            className="sign-button"
+            onClick={submitForm}
+          />
         </div>
       </div>
     </div>

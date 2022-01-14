@@ -17,7 +17,7 @@ const Account = () => {
 
   return (
     <div>
-      <div>My Account</div>
+      <div className="header">My Account</div>
       {del ? (
         <AccountDelete
           del={del}

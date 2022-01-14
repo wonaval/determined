@@ -9,13 +9,13 @@ import { UserContext } from './global/UserContext';
 
 // Import global components
 import Header from './global/Header';
-import Navigation from './global/Navigation';
 import Footer from './global/Footer';
 
 // Import pages
 import Home from './Home';
 import Routines from './Routine';
-import Logs from './Log';
+import LogAdd from './Log/LogAdd';
+import LogView from './Log/LogView';
 import Account from './Account';
 
 // Import CSS
@@ -49,24 +49,23 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Navigation />
       <Routes>
         <Route path="*" element={<Home />} />
         <Route
           path="/account"
-          element={user.name ? <Account /> : <Navigate to="/signin" />}
+          element={user.name ? <Account /> : <Navigate to="/" />}
         />
         <Route
           path="/log"
-          element={user.name ? <Logs /> : <Navigate to="/signup" />}
+          element={user.name ? <LogView /> : <Navigate to="/" />}
         />
         <Route
           path="/log/:routine_id"
-          element={user.name ? <Logs /> : <Navigate to="/signup" />}
+          element={user.name ? <LogAdd /> : <Navigate to="/" />}
         />
         <Route
           path="/routine"
-          element={user.name ? <Routines /> : <Navigate to="/signup" />}
+          element={user.name ? <Routines /> : <Navigate to="/" />}
         />
       </Routes>
       <Footer />

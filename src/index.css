@@ -3,8 +3,12 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   background-color: #121212;
+  /* background-image: repeating-linear-gradient(#404040, #282828, #404040); */
+
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
